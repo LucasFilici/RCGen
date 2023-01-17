@@ -1,6 +1,6 @@
 # RCGen
 ### FLOSS Report Card Generator
-
+***
 # How To Install
 https://www.youtube.com/watch?v=8zuFtL9aKC0
 1. Click "Releases" on the right ->
