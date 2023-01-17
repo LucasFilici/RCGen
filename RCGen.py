@@ -5,11 +5,21 @@ RCGen is distributed in the hope that it will be useful, but WITHOUT ANY WARRANT
 
 You should have received a copy of the GNU General Public License along with RCGen. If not, see <https://www.gnu.org/licenses/>. 
 """
-import sys
+import sys, os
 import random
 from PyQt5.QtWidgets import QMainWindow, QMenuBar, QDialog, QAction, QApplication, QComboBox, QLineEdit, QPushButton, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QScrollArea
 from PyQt5.QtCore import Qt, QUrl
 from PyQt5.QtGui import QIcon, QFont, QDesktopServices
+from PyQt5 import QtGui
+
+basedir = os.path.dirname(__file__)
+
+try:
+    from ctypes import windll  # Only exists on Windows.
+    myappid = 'tk.LucasFilici.RCGen.0.01'
+    windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+except ImportError:
+    pass
 
 gender1 = {'male': 'his', 'female': 'her', 'gender': 'perse'}
 gender2 = {'male': 'he', 'female': 'she', 'gender': 'perse'}
@@ -213,7 +223,7 @@ class App(QMainWindow):
         self.top = 10
         self.width = int(QApplication.desktop().screenGeometry().width() * 0.5)
         self.height = int(QApplication.desktop().screenGeometry().height() * 0.5)
-        self.setWindowIcon(QIcon("WindowIcon.png"))
+        #self.setWindowIcon(QIcon("./WindowIcon.png"))
         self.initUI()
         self.move(QApplication.desktop().screen().rect().center() - self.rect().center())
         self.web_view = None
@@ -236,6 +246,7 @@ class App(QMainWindow):
 
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setWindowIcon(QtGui.QIcon(os.path.join(basedir, 'WindowIcon.ico')))
 
         # Create the menu bar
         self.menu_bar = self.menuBar()
@@ -525,7 +536,7 @@ class App(QMainWindow):
             "P&T 3: back pencil floats": " did " + get_adjective2() + " job with " + gender1[gender] + " floats on " + gender1[gender] + " back as " + gender2[gender] + " kept " + gender1[gender] + " arms to " + gender1[gender] + " sides and " + gender1[gender] + " legs straight",
             "P&T 3: kicking on front": " performed " + get_adjective1() + " flutter kicking on " + gender1[gender] + " front as " + name + " did a great job of keeping " + gender1[gender] + " arms and legs straight (in rocketship position) with " + gender1[gender] + " face in the water while kicking",
             "P&T 3: kicking on back": " performed " + get_adjective1() + " flutter kicking on " + gender1[gender] + " back as " + name + " did a great job of keeping " + gender1[gender] + " arms to " + gender1[gender] + " sides and " + gender1[gender] + " legs straight (in pencil position) while kicking with " + gender1[gender] + " ears in the water",
-            "P&T 3: Underwater passes": " did " + get_adjective2() + " job with underwater passes as " + gender1[gender] + " remained relaxed while being passed underwater",
+            "P&T 3: Underwater passes": " did " + get_adjective2() + " job with underwater passes as " + gender2[gender] + " remained relaxed while being passed underwater",
             "PS 1: enter and exit": " did " + get_adjective2() + " job of safely entering and exiting the water",
             "PS 1: jumps": " did " + get_adjective2() + " job recovering of " + gender1[gender] + " balance after jumping into the water",
             "PS 1: face wet": " was comfortable fully submerging " + gender1[gender] + " face in the water",
