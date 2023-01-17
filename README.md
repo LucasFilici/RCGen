@@ -1,2 +1,4 @@
 # RCGen
-FLOSS Report Card Generator
+A FLOSS Report Card Generator
+
+# How To Install
