@@ -1,5 +1,6 @@
-### RCGen
-#### FLOSS Report Card Generator
+## RCGen
+RCGen is a pice of Free/Libre and Open Source Software that generates swimming report cards.
+Currently, this program is tailored for instructors teaching Lifesaving Society courses ranging from Parent & Tot 1 to Preschool 5.
 ***
 ## How To Install
 https://www.youtube.com/watch?v=8zuFtL9aKC0
