@@ -17,4 +17,4 @@ https://www.youtube.com/watch?v=8zuFtL9aKC0
 
 - RCGen runs on Windows, but will soon support Linux and Mac. There may possibly be a website as well.
 
-- There are a few instances of the wrong pronouns being used and a number of instances in which run on sentences are used when optional feedback is added... This will be fixed after I get a Mac build working.
+- There are a few instances of the wrong pronouns being used and a number of instances in which run-on sentences are used when optional feedback is added... This will be fixed after I get a Mac build working.
