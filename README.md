@@ -1,5 +1,5 @@
 ## RCGen
-RCGen is a pice of Free/Libre and Open Source Software that generates swimming report cards.
+RCGen is a piece of Free/Libre and Open Source Software that generates swimming report cards.
 
 ## How To Install
 https://www.youtube.com/watch?v=8zuFtL9aKC0
