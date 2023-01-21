@@ -684,7 +684,7 @@ class App(QMainWindow):
         positive_feedback_intro = f""
         if positive_feedback_var1:
             positive_feedback_intro += f" {name}{positive_feedback_var1}"
-        if positive_feedback_var2.startswith(f"'s"):
+        if positive_feedback_var2.startswith("'s"):
             positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
         elif positive_feedback_var2:
             positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
@@ -693,15 +693,15 @@ class App(QMainWindow):
 
         constructive_feedback = f""
         if constructive_feedback_var1:
-            if constructive_feedback_var1.startswith(f" When"):
+            if constructive_feedback_var1.startswith(" When"):
                 constructive_feedback += f"{constructive_feedback_var1}"
             else:
                 constructive_feedback += f" {name} should{constructive_feedback_var1}"
         if constructive_feedback_var2:
-            if constructive_feedback_var2.startswith(f" When"):
+            if constructive_feedback_var2.startswith(" When"):
                 constructive_feedback += f".{constructive_feedback_var2}."
             else:
-                constructive_feedback += f". {gender3[gender]} should also{cosntructive_feedback_var2}."
+                constructive_feedback += f". {gender3[gender]} should also{constructive_feedback_var2}."
         else:
             constructive_feedback += f"." if constructive_feedback_var1 else f""
 
@@ -730,3 +730,7 @@ if __name__ == '__main__':
     sys.exit(app.exec_())
 
 #add printing functionality (make sure it fits within the report card area on 8.5x11" paper) and printing functionality which allows one to print directly onto report cards.
+
+#-figure out logic issue causing no spaces on mac
+#-figure out why help menu won't show up on mac
+#-exceptionally well: replace with adjectives
