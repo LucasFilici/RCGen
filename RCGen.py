@@ -243,7 +243,7 @@ class App(QMainWindow):
         font_results = QApplication.font()
         #width_percent_results = 0.005859375 # width_percent = desired_font_size (15) / screen_width (2560, my monitor's width)
         #results_font_size = int(width_percent_results * QApplication.desktop().screenGeometry().width())
-        font_size = 15
+        results_font_size = 15
         font_results.setPointSize(results_font_size)
 
         self.setWindowTitle(self.title)
@@ -414,7 +414,7 @@ class App(QMainWindow):
         label_font = QApplication.font()
         #width_percent_label = 0.004296875 # width_percent = desired_font_size (8) / screen_width (2560, my monitor's width)
         #label_font_size = int(width_percent_label * QApplication.desktop().screenGeometry().width())
-        font_size = 8
+        label_font_size = 8
         label_font.setPointSize(label_font_size)
         self.about_label.setAlignment(Qt.AlignCenter)
         self.about_label.setFont(label_font)
