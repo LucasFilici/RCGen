@@ -231,8 +231,9 @@ class App(QMainWindow):
     def initUI(self):
         # Set the font size for the font (which controls everything but the about window) to width_percent
         font = QApplication.font()
-        width_percent = 0.0046875 # width_percent = desired_font_size (12) / screen_width (2560, my monitor's width)
-        font_size = int(width_percent * QApplication.desktop().screenGeometry().width())
+        #width_percent = 0.0046875 # width_percent = desired_font_size (12) / screen_width (2560, my monitor's width)
+        #font_size = int(width_percent * QApplication.desktop().screenGeometry().width())
+        font_size = 12
         font.setPointSize(font_size)
 
         # Set the font for the main window widget
@@ -240,8 +241,9 @@ class App(QMainWindow):
 
         # Set the font size for the result label to width_percent_results
         font_results = QApplication.font()
-        width_percent_results = 0.005859375 # width_percent = desired_font_size (15) / screen_width (2560, my monitor's width)
-        results_font_size = int(width_percent_results * QApplication.desktop().screenGeometry().width())
+        #width_percent_results = 0.005859375 # width_percent = desired_font_size (15) / screen_width (2560, my monitor's width)
+        #results_font_size = int(width_percent_results * QApplication.desktop().screenGeometry().width())
+        font_size = 15
         font_results.setPointSize(results_font_size)
 
         self.setWindowTitle(self.title)
@@ -410,8 +412,9 @@ class App(QMainWindow):
         self.about_label.setOpenExternalLinks(True)
         # Set the font size for the about label to width_percent_label
         label_font = QApplication.font()
-        width_percent_label = 0.004296875 # width_percent = desired_font_size (8) / screen_width (2560, my monitor's width)
-        label_font_size = int(width_percent_label * QApplication.desktop().screenGeometry().width())
+        #width_percent_label = 0.004296875 # width_percent = desired_font_size (8) / screen_width (2560, my monitor's width)
+        #label_font_size = int(width_percent_label * QApplication.desktop().screenGeometry().width())
+        font_size = 8
         label_font.setPointSize(label_font_size)
         self.about_label.setAlignment(Qt.AlignCenter)
         self.about_label.setFont(label_font)
