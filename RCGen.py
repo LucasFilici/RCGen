@@ -9,7 +9,7 @@ import sys, os
 import random
 from PyQt5.QtWidgets import QMainWindow, QMenuBar, QDialog, QAction, QApplication, QComboBox, QLineEdit, QPushButton, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QScrollArea
 from PyQt5.QtCore import Qt, QUrl
-from PyQt5.QtGui import QIcon, QFont, QDesktopServices
+from PyQt5.QtGui import QIcon, QFont, QDesktopServices, QGuiApplication
 from PyQt5 import QtGui
 
 basedir = os.path.dirname(__file__)
@@ -230,7 +230,7 @@ class App(QMainWindow):
 
     def initUI(self):
         # Set the font size for the font (which controls everything but the about window) to width_percent
-        font = QApplication.font()
+        font = QGuiApplication.font()
         font_size = 12
         font.setPointSize(font_size)
 
@@ -238,7 +238,7 @@ class App(QMainWindow):
         self.setFont(font)
 
         # Set the font size for the result label to width_percent_results
-        font_results = QApplication.font()
+        font_results = QGuiApplication.font()
         results_font_size = 15
         font_results.setPointSize(results_font_size)
 
@@ -407,7 +407,7 @@ class App(QMainWindow):
         self.about_label = QLabel("RCGen is FLOSS for generating swimming report cards.<br>" + link + "<br><br>Copyright © 2023 Lucas Filici<br>under GPL-3.0-or-later")
         self.about_label.setOpenExternalLinks(True)
         # Set the font size for the about label to width_percent_label
-        label_font = QApplication.font()
+        label_font = QGuiApplication.font()
         label_font_size = 8
         label_font.setPointSize(label_font_size)
         self.about_label.setAlignment(Qt.AlignCenter)
