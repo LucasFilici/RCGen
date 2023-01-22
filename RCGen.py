@@ -21,6 +21,8 @@ try:
 except ImportError:
     pass
 
+font_preference = "Arial"
+
 gender1 = {'male': 'his', 'female': 'her', 'gender': 'perse'}
 gender2 = {'male': 'he', 'female': 'she', 'gender': 'perse'}
 gender3 = {'male': 'He', 'female': 'She', 'gender': 'Perse'}
@@ -185,8 +187,6 @@ constructive_feedback_dict = {
     "PS 5: back crawl": "",
     "PS 5: interval training": "",
 }
-
-font_preference = "Arial"
 
 # Create a new dictionary that maps the full names to the shorthand versions
 level_map = {"Parent & Tot 1": "P&T 1", "Parent & Tot 2": "P&T 2", "Parent & Tot 3": "P&T 3", "Preschool 1": "PS 1", "Preschool 2": "PS 2", "Preschool 3": "PS 3", "Preschool 4": "PS 4", "Preschool 5": "PS 5"}
