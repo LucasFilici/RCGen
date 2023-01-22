@@ -9,7 +9,7 @@ import sys, os
 import random
 from PyQt5.QtWidgets import QMainWindow, QMenuBar, QDialog, QAction, QApplication, QComboBox, QLineEdit, QPushButton, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QScrollArea
 from PyQt5.QtCore import Qt, QUrl
-from PyQt5.QtGui import QIcon, QFont, QDesktopServices, QGuiApplication
+from PyQt5.QtGui import QIcon, QFont, QDesktopServices, QFontDatabase
 from PyQt5 import QtGui
 
 basedir = os.path.dirname(__file__)
@@ -186,6 +186,8 @@ constructive_feedback_dict = {
     "PS 5: interval training": "",
 }
 
+font_preference = "Arial"
+
 # Create a new dictionary that maps the full names to the shorthand versions
 level_map = {"Parent & Tot 1": "P&T 1", "Parent & Tot 2": "P&T 2", "Parent & Tot 3": "P&T 3", "Preschool 1": "PS 1", "Preschool 2": "PS 2", "Preschool 3": "PS 3", "Preschool 4": "PS 4", "Preschool 5": "PS 5"}
 
@@ -229,16 +231,19 @@ class App(QMainWindow):
         self.web_view = None
 
     def initUI(self):
-        # Set the font size for the font (which controls everything but the about window) to width_percent
-        font = QGuiApplication.font()
+        font_db = QFontDatabase()
+        if font_db.families().__contains__(font_preference):
+            font = QFont(font_preference)
+            self.setFont(font)
+            font_results = QFont(font_preference)
+        else:
+            font = QApplication.font()
+            font_results = QApplication.font()
+        
         font_size = 12
         font.setPointSize(font_size)
-
-        # Set the font for the main window widget
         self.setFont(font)
 
-        # Set the font size for the result label to width_percent_results
-        font_results = QGuiApplication.font()
         results_font_size = 15
         font_results.setPointSize(results_font_size)
 
@@ -406,8 +411,11 @@ class App(QMainWindow):
         link = "<a href='https://rcgen.tk'>RCGen.tk</a>"
         self.about_label = QLabel("RCGen is FLOSS for generating swimming report cards.<br>" + link + "<br><br>Copyright © 2023 Lucas Filici<br>under GPL-3.0-or-later")
         self.about_label.setOpenExternalLinks(True)
-        # Set the font size for the about label to width_percent_label
-        label_font = QGuiApplication.font()
+        font_db = QFontDatabase()
+        if font_preference in set(font_db.families()):
+            label_font = QFont(font_preference)
+        else:
+            label_font = QFont("default")
         label_font_size = 8
         label_font.setPointSize(label_font_size)
         self.about_label.setAlignment(Qt.AlignCenter)
