@@ -681,17 +681,18 @@ class App(QMainWindow):
 
         # Update the result label
         intro = getintro()
-        positive_feedback_intro = f""
+        positive_feedback_intro = ""
         if positive_feedback_var1:
             positive_feedback_intro += f" {name}{positive_feedback_var1}"
-        if positive_feedback_var2.startswith("'s"):
-            positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
-        elif positive_feedback_var2:
-            positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
+        if positive_feedback_var2:
+            if positive_feedback_var2.startswith("'s"):
+                positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
+            else:
+                positive_feedback_intro += f" and {name}{positive_feedback_var2}!"
         else:
-            positive_feedback_intro += f"!" if positive_feedback_var1 else f""
+            positive_feedback_intro += "!" if positive_feedback_var1 else ""
 
-        constructive_feedback = f""
+        constructive_feedback = ""
         if constructive_feedback_var1:
             if constructive_feedback_var1.startswith(" When"):
                 constructive_feedback += f"{constructive_feedback_var1}"
@@ -703,25 +704,22 @@ class App(QMainWindow):
             else:
                 constructive_feedback += f". {gender3[gender]} should also{constructive_feedback_var2}."
         else:
-            constructive_feedback += f"." if constructive_feedback_var1 else f""
+            constructive_feedback += "." if constructive_feedback_var1 else ""
 
-        positive_feedback_conclusion = f""
+        positive_feedback_conclusion = ""
         if positive_feedback_var3:
             positive_feedback_conclusion += f" {name}{positive_feedback_var3}"
-        if positive_feedback_var4.startswith("'s"):
-            positive_feedback_conclusion += f" and {name}{positive_feedback_var4}!"
-        elif positive_feedback_var4:
-            positive_feedback_conclusion += f" and {name}{positive_feedback_var4}!"
+        if positive_feedback_var4:
+            if positive_feedback_var4.startswith("'s"):
+                positive_feedback_conclusion += f" and {name}{positive_feedback_var4}!"
+            else:
+                positive_feedback_conclusion += f" and {name}{positive_feedback_var4}!"
         else:
-            positive_feedback_conclusion += f"!" if positive_feedback_var3 else f""
+            positive_feedback_conclusion += "!" if positive_feedback_var3 else ""
 
-        #result = intro + positive_feedback_intro + constructive_feedback + positive_feedback_conclusion + " " + getconclusion()
         result = f"{intro}{positive_feedback_intro}{constructive_feedback}{positive_feedback_conclusion} {getconclusion()}"
-
-        # A REALLY BAD WAY TO DO WHAT I ENDED UP DOING
-        #result = getintro() + (" " + name + positive_feedback_var1 if positive_feedback_var1 else "") + (" and " + gender2[gender] + positive_feedback_var2 + "!" if positive_feedback_var2 else ("!" if positive_feedback_var1 else "")) + (" " + name + " should" + constructive_feedback_var1 if constructive_feedback_var1 else "") + (" and " + gender2[gender] + " should also" + constructive_feedback_var2 if constructive_feedback_var2 else ("." if constructive_feedback_var1 else "")) + ("." if constructive_feedback_var2 else "") + (" " + name + positive_feedback_var3 if positive_feedback_var3 else "") + (" and " + gender2[gender] + positive_feedback_var4 + "!" if positive_feedback_var4 else ("!" if positive_feedback_var3 else "")) + " " + getconclusion()
-
         self.result_label.setText(result)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
