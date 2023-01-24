@@ -15,6 +15,6 @@ https://www.youtube.com/watch?v=8zuFtL9aKC0
 
 - Currently, RCGen is tailored for instructors teaching Lifesaving Society courses ranging from Parent & Tot 1 to Preschool 5.
 
-- RCGen runs on Windows, but will soon support Linux and Mac. There may possibly be a website as well.
+- RCGen runs on Windows, but will soon support Mac. There may possibly be a website as well. If you would like a Linux build, please ask.
 
 - There are a few instances of the wrong pronouns being used and a number of instances in which run-on sentences are used when optional feedback is added... This will be fixed after a bit of beta testing is done.
