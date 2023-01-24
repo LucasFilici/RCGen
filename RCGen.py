@@ -261,14 +261,14 @@ class App(QMainWindow):
         # Create the Help menu and add it to the menu bar
         self.help_menu = self.menu_bar.addMenu("Help")
 
-        # Create the Help action and add it to the Help menu
+        # Create the Help and Info actions and add them to the Help menu
         self.help_action = QAction("Tutorial", self)
-        self.about_action = QAction("About", self)
-        self.help_menu.addActions([self.help_action, self.about_action])
+        self.info_action = QAction("Info", self)
+        self.help_menu.addActions([self.help_action, self.info_action])
 
-        # Connect the Help and About actions to their corresponding functions
+        # Connect the Help and Info actions to their corresponding functions
         self.help_action.triggered.connect(self.open_help)
-        self.about_action.triggered.connect(self.open_about)
+        self.info_action.triggered.connect(self.open_info)
 
         #I don't know why the heck I can't get the placeholder text centered AND visible on focus.
         # Create the line edit and center it
@@ -399,39 +399,39 @@ class App(QMainWindow):
         url = QUrl("https://www.youtube.com/watch?v=rpM_gD3d0_0")
         QDesktopServices.openUrl(url)
 
-    def open_about(self):
-        # Create a dialog box with information about the program
-        about_box = QDialog(self)
-        about_box.setWindowTitle("About RCGen")
+    def open_info(self):
+        # Create a dialog box with information info the program
+        info_box = QDialog(self)
+        info_box.setWindowTitle("About RCGen")
 
         # Get the position and size of the main window
         main_window_geometry = self.geometry()
 
         # Create a QLabel with a hyperlink
         link = "<a href='https://rcgen.tk'>RCGen.tk</a>"
-        self.about_label = QLabel("RCGen is FLOSS for generating swimming report cards.<br>" + link + "<br><br>Copyright © 2023 Lucas Filici<br>under GPL-3.0-or-later")
-        self.about_label.setOpenExternalLinks(True)
+        self.info_label = QLabel("RCGen is FLOSS for generating swimming report cards.<br>" + link + "<br><br>Copyright © 2023 Lucas Filici<br>under GPL-3.0-or-later")
+        self.info_label.setOpenExternalLinks(True)
         font_db = QFontDatabase()
         if font_preference in set(font_db.families()):
             label_font = QFont(font_preference)
         else:
             label_font = QFont("default")
-        label_font_size = 8
+        label_font_size = 9
         label_font.setPointSize(label_font_size)
-        self.about_label.setAlignment(Qt.AlignCenter)
-        self.about_label.setFont(label_font)
+        self.info_label.setAlignment(Qt.AlignCenter)
+        self.info_label.setFont(label_font)
 
         # Add the label to the dialog box
         layout = QVBoxLayout()
-        layout.addWidget(self.about_label)
-        about_box.setLayout(layout)
+        layout.addWidget(self.info_label)
+        info_box.setLayout(layout)
 
-        about_box.setWindowFlags(about_box.windowFlags() & ~Qt.WindowContextHelpButtonHint)
-        about_box.adjustSize()
-        about_box.setFixedWidth(about_box.sizeHint().width())
-        about_box.setFixedHeight(about_box.sizeHint().height())
+        info_box.setWindowFlags(info_box.windowFlags() & ~Qt.WindowContextHelpButtonHint)
+        info_box.adjustSize()
+        info_box.setFixedWidth(info_box.sizeHint().width())
+        info_box.setFixedHeight(info_box.sizeHint().height())
 
-        about_box.exec_()
+        info_box.exec_()
 
     def updatePositiveFeedbackComboBox(self, index):
         # Clear the current options in the positive feedback combo box
@@ -737,6 +737,5 @@ if __name__ == '__main__':
 
 #add printing functionality (make sure it fits within the report card area on 8.5x11" paper) and printing functionality which allows one to print directly onto report cards.
 
-#-figure out logic issue causing no spaces on mac
 #-figure out why help menu won't show up on mac
 #-exceptionally well: replace with adjectives
