@@ -193,9 +193,8 @@ level_map = {"Parent & Tot 1": "P&T 1", "Parent & Tot 2": "P&T 2", "Parent & Tot
 
 adjectives = ["amazing", "great", "fantastic", "fabulous", "wonderful", "incredible"]
 last_adjective = ""
-
-def shuffle_adjectives():
-    random.shuffle(adjectives)
+adjectives3 = ["exceptionally well", "remarkably well", "outstandingly well"]
+last_adjective3 = ""
 
 def get_adjective1():
     global last_adjective
@@ -215,6 +214,14 @@ def get_adjective2():
         return f"an {adjective}"
     else:
         return f"a {adjective}"
+
+def get_adjective3():
+    global last_adjective3
+    adjective3 = random.choice(adjectives3)
+    while adjective3 == last_adjective3:
+        adjective3 = random.choice(adjectives3)
+    last_adjective3 = adjective3
+    return f"{adjective3}"
 
 class App(QMainWindow):
 
@@ -562,7 +569,7 @@ class App(QMainWindow):
             "PS 2: lateral rolls": f" did {get_adjective2()} job with {gender1[gender]} lateral rollovers (rolling from front-to-back-to-front starfish floats) with a lifejacket",
             "PS 2: front glides": f" performed {get_adjective1()} front glides with a lifejacket as {name} did a great job of keeping {gender1[gender]} arms and legs straight (in rocketship position)",
             "PS 2: back glides": f" performed {get_adjective1()} front glides with a lifejacket as {name} did a great job of keeping {gender1[gender]} arms to {gender1[gender]} sides and {gender1[gender]} legs straight (in pencil position)",
-            "PS 2: flutter kick": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} back, maintaining steady and consistently-rhythmic kicking",
+            "PS 2: flutter kick": f" performed flutter kicking on {gender1[gender]} back {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
             "PS 3: jumps": f" did {get_adjective2()} job returning to surface of the water in a controlled manner during {gender1[gender]} jumps",
             "PS 3: sideways entries": f" did {get_adjective2()} job returning to surface of the water in a controlled manner during {gender1[gender]} sideways entries",
             "PS 3: submerge and hold breath": f" was comfortable holding {gender1[gender]} breath underwater for three seconds",
@@ -574,8 +581,8 @@ class App(QMainWindow):
             "PS 3: lateral rolls": f" did {get_adjective2()} job with {gender1[gender]} lateral rollovers (rolling from front-to-back-to-front-starfish floats) as {gender1[gender]} rollovers were controlled and {gender2[gender]} remained horizontal throughout",
             "PS 3: front glides": f" performed {get_adjective1()} front glides as {name} put {gender1[gender]} face in the water and kept {gender1[gender]} arms and legs straight (in a rocketship position)",
             "PS 3: back glides": f" performed {get_adjective1()} back glides as {name} put {gender1[gender]} ears in the water, kept {gender1[gender]} arms to {gender1[gender]} sides, and kept {gender1[gender]} legs straight (pencil position)",
-            "PS 3: flutter kick on front": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} front, maintaining steady and consistently-rhythmic kicking",
-            "PS 3: flutter kick on back": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} back, maintaining steady and consistently-rhythmic kicking",
+            "PS 3: flutter kick on front": f" performed flutter kicking on {gender1[gender]} front {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
+            "PS 3: flutter kick on back": f" performed flutter kicking on {gender1[gender]} back {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
             "PS 4: jumps": f" did {get_adjective2()} job returning to surface of the water in a controlled manner during {gender1[gender]} jumps",
             "PS 4: sideways entries": f" did {get_adjective2()} job returning to surface of the water in a controlled manner during {gender1[gender]} sideways entries",
             "PS 4: treading": f" did a great job treading as {gender2[gender]} kept {gender1[gender]} mouth and nose above water and supported {gender4[gender]} with strong kicking and sculling action",
@@ -584,19 +591,19 @@ class App(QMainWindow):
             "PS 4: swim to survive 6.(PFD+jump)": f" did {get_adjective2()} job with {gender1[gender]} swim to survive sequence with a PFD as {gender2[gender]} performed a controlled sideways entry, kept {gender4[gender]} afloat when treading with strong sculling, and used a rhythmic flutter kick to swim",
             "PS 4: swim to survive 7.(no PFD or jump)": f" did {get_adjective2()} job with {gender1[gender]} swim to survive sequence as {gender2[gender]} performed {get_adjective2()} front float, rolled over to {gender1[gender]} back, and used a rhythmic flutter kick to swim",
             "PS 4: side glides": f" performed {get_adjective1()} side glides as {name} put {gender1[gender]} bottom arm's shoulder to {gender1[gender]} ear, kept {gender1[gender]} top arm to {gender1[gender]} side, and kept {gender1[gender]} legs straight",
-            "PS 4: flutter kick on front": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} front, maintaining steady and consistently-rhythmic kicking",
-            "PS 4: flutter kick on back": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} back, maintaining steady and consistently-rhythmic kicking",
-            "PS 4: flutter kick on side": f" performed exceptionally well with {gender1[gender]} flutter kicking on {gender1[gender]} side, maintaining steady and consistently-rhythmic kicking",
-            "PS 4: front crawl": f" performed {gender1[gender]} front crawl exceptionally well as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick",
+            "PS 4: flutter kick on front": f" performed flutter kicking on {gender1[gender]} front {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
+            "PS 4: flutter kick on back": f" performed flutter kicking on {gender1[gender]} back {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
+            "PS 4: flutter kick on side": f" performed flutter kicking on {gender1[gender]} side {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking",
+            "PS 4: front crawl": f" performed {gender1[gender]} front crawl {get_adjective3()} as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick",
             "PS 5: forward rolls": f" did {get_adjective2()} job returning to surface of the water in a controlled manner during {gender1[gender]} forward rolls",
             "PS 5: treading": f" did a great job treading as {gender2[gender]} kept {gender1[gender]} mouth and nose above water, remained vertical, and supported {gender4[gender]} with strong kicking and sculling action",
             "PS 5: submerge and hold breath": f" was comfortable holding {gender1[gender]} breath underwater for five seconds",
             "PS 5: object recovery": f" did {get_adjective2()} job of grabbing objects from the bottom of the pool without {gender1[gender]} feet touching the bottom",
             "PS 5: swim to survive": f" did {get_adjective2()} job with {gender1[gender]} swim to survive sequence as {gender2[gender]} performed a controlled sideways entry, kept {gender4[gender]} afloat when treading with strong sculling, and used a rhythmic flutter kick while swimming",
             "PS 5: whip kick in vertical position": f" remained vertical when performing symmetrical whip kicks, keeping {gender1[gender]} knees apart during {gender1[gender]} simultaneous and symmetrical kicks",
-            "PS 5: front crawl": f" performed {gender1[gender]} front crawl exceptionally well as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick with a slight knee bend",
-            "PS 5: back crawl": f" performed {gender1[gender]} back crawl exceptionally well as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick",
-            "PS 5: interval training": f" performed exceptionally well with {gender1[gender]} interval training as {gender2[gender]} maintained steady and consistently-rhythmic kicking during all sets of flutter kick on back",
+            "PS 5: front crawl": f" performed {gender1[gender]} front crawl {get_adjective3()} as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick with a slight knee bend",
+            "PS 5: back crawl": f" performed {gender1[gender]} back crawl {get_adjective3()} as {gender2[gender]} maintained alternate arm action and a propulsive, rhythmic flutter kick",
+            "PS 5: interval training": f" performed interval training {get_adjective3()} as {gender2[gender]} maintained steady and consistently-rhythmic kicking during every set of flutter kick on {gender1[gender]} back",
         })
         constructive_feedback_dict.update({
             "P&T 1: readiness for submersion": f" try to become more comfortable with getting {gender1[gender]} face wet; one way to help {gender1[gender]} achieve this would be to sprinkle water on {gender1[gender]} face during bath time",
@@ -734,8 +741,3 @@ if __name__ == '__main__':
     ex = App()
     ex.show()
     sys.exit(app.exec_())
-
-#add printing functionality (make sure it fits within the report card area on 8.5x11" paper) and printing functionality which allows one to print directly onto report cards.
-
-#-figure out why help menu won't show up on mac
-#-exceptionally well: replace with adjectives
