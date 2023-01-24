@@ -16,7 +16,7 @@ basedir = os.path.dirname(__file__)
 
 try:
     from ctypes import windll  # Only exists on Windows.
-    myappid = 'tk.LucasFilici.RCGen.0.01'
+    myappid = 'tk.LucasFilici.RCGen.0.02'
     windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 except ImportError:
     pass
