@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=IpwnmOiC8PQ
 9. Enter the password for your Mac and hit `return` on your keyboard.
 9. Find the saved file in your downloads, double click it, and drag `RCGen` into `Applications`.
 10. Open `RCGen` in `Applications` or from your `Launchpad`.
-11. Click `Open` in response to: "'RCGen' is an app downloaded from the Internet. Are you sure you want to open it?"
+11. Click `Open` in response to: _"'RCGen' is an app downloaded from the Internet. Are you sure you want to open it?"_
 12. Go back to the terminal, type `sudo spctl --master-enable`, and hit `return` on your keyboard.
 13. Enter the password for your Mac and hit `return` on your keyboard.
 14. Close the terminal and whatever else. You're good now. Enjoy the funny software.
