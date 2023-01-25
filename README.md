@@ -2,7 +2,7 @@
 RCGen is a piece of Free/Libre and Open Source Software that generates swimming report cards.
 
 ## How To Install on MacOS
-
+https://www.youtube.com/watch?v=IpwnmOiC8PQ
 1. Click `Releases` on the right ->
 2. Click the latest version of the software.
 3. Click on `Assets`.
