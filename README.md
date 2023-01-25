@@ -21,14 +21,18 @@ https://www.youtube.com/watch?v=IpwnmOiC8PQ
 14. Close the terminal and whatever else. You're good now. Enjoy the funny software.
 
 ## How To Install on PC
-https://www.youtube.com/watch?v=8zuFtL9aKC0
+https://www.youtube.com/watch?v=tUdrqg-P9dc
 1. Click `Releases` on the right ->
-2. Click the latest version of the software
-3. Click on `Assets`
-4. Click on the installer relevant to your operating system
-  (Windows = `.exe`, Mac = `.dmg`)
-5. Save the file
-6. Find the saved file, double click it, and walk through the installer
+2. Click the latest version of the software.
+3. Click on `Assets`.
+4. Click on the installer relevant to your operating system.
+  (Windows = `.exe`)
+5. Save the file in your `Downloads` folder (or wherever you want) if prompted.
+6. Find the saved file and double click it.
+7. In response to the _Microsoft Defender SmartScreen_ prompt, click `More Info` and then click `Run Anyway`.
+8. Click `Yes` in response to the "Do you want to allow this app..." prompt.
+9. Walk through the installer.
+10. You're good now. Enjoy the funny software.
 
 ## Limitations
 
