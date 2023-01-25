@@ -40,4 +40,4 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 
 - RCGen runs on Windows and Mac. There may possibly be a website as well. If you would like a Linux build, please ask.
 
-- There are a few instances of the wrong pronouns being used and a number of instances in which run-on sentences are used when optional feedback is added... This will be fixed after a bit of beta testing is done.
+- There are a few instances of the wrong pronouns being used and a number of instances in which run-on sentences are used. The latter issue typically happens when optional feedback is added... This will be fixed after a bit of beta testing is done.
