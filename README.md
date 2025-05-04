@@ -35,7 +35,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 10. You're good now. Enjoy the software.
 
 ## Packaging Instructions
-[For advanced users who wish to have complete control over their installation.]
+==**[For advanced users who wish to have complete control over their installation.]**==
 
   ### MacOS
   - https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
