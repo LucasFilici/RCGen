@@ -43,7 +43,10 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
       `pip3 install PyInstaller`
     2. Run the following command within the "RCGen-main" folder:
       `pyinstaller --windowed --icon="WindowIcon.icns" RCGen.py`
-    3. [I'll get to this in a second.]
+    3. Install "Brew": https://brew.sh/
+    4. Install create-dmg:
+    `brew install create-dmg`
+    5. [I will come back to this in a bit.]
   ### Windows
   - https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
     1. Download the source code and install pyinstaller:
@@ -75,6 +78,6 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 
 - Currently, RCGen is tailored for instructors teaching Lifesaving Society courses ranging from Parent & Tot 1 to Preschool 5.
 
-- RCGen runs on Windows and Mac. There may possibly be a website as well. If you would like a Linux build, please ask.
+- RCGen runs on Windows and Mac. Though, I will "soon" begin work on a website as I am aware that the average person does not know how to even install third-party software anymore.. If you would like a Linux build, please ask.
 
 - There are a few instances of the wrong pronouns being used and a number of instances in which run-on sentences are used. The latter issue typically happens when optional feedback is added... This will be fixed after a bit of beta testing is done.
