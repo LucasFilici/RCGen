@@ -34,8 +34,10 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 9. Walk through the installer.
 10. You're good now. Enjoy the software.
 
-## Packaging Instructions [For advanced users who wish to have complete control over their installation.]
-  ### MacOS [For advanced users who wish to have complete control over their installation.]
+## Packaging Instructions
+[For advanced users who wish to have complete control over their installation.]
+
+  ### MacOS
   - https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
     1.Download the source code and install pyinstaller:
       `pip3 install PyInstaller`
