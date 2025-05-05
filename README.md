@@ -46,7 +46,33 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 3. Install "Brew": https://brew.sh/
 4. Install create-dmg:
 `brew install create-dmg`
-5. [I will come back to this in a bit.]
+5. Create the following text document and name it "builddmg.sh":
+```
+#!/bin/sh
+# Create a folder (named dmg) to prepare our DMG in (if it doesn't already exist).
+mkdir -p dist/dmg
+# Empty the dmg folder.
+rm -r dist/dmg/*
+# Copy the app bundle to the dmg folder.
+cp -r "dist/RCGen.app" dist/dmg
+# If the DMG already exists, delete it.
+test -f "dist/RCGen.dmg" && rm "dist/RCGen.dmg"
+create-dmg \
+  --volname "RCGen" \
+  --volicon "WindowIcon.icns" \
+  --window-pos 200 120 \
+  --window-size 600 300 \
+  --icon-size 100 \
+  --icon "RCGen.app" 175 120 \
+  --hide-extension "RCGen.app" \
+  --app-drop-link 425 120 \
+  "dist/RCGen.dmg" \
+  "dist/dmg/"
+```
+6. Place your newly-created "builddmg.sh" script within the "RCGen-main" folder (the root directory).
+7. Run the following command on the newly-created file to make it executable: `chmod +x builddmg.sh`
+8. Run the newly-created script: `zsh -x ./builddmg.sh`
+9. Enjoy your RCGen Installer within the "dist" folder (within RCGen-main").
 
   ### Windows
   https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
@@ -54,7 +80,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
   `pip3 install PyInstaller`
 2. Run the following command within the "RCGen-main" folder:
   `pyinstaller --hidden-import PyQt5.QtCore --hidden-import PyQt5.QtGui --hidden-import PyQt5.QtWidgets --hidden-import PyQt5 --noconsole --add-data "WindowIcon.ico;." RCGen.py`
-  At this point, you will have a functional .exe file within the "dist" folder.
+  At this point, you will have a functional .exe file within the "dist" folder (within "RCGen-main").
   If you wish to create an installer, the solution I used was InstallForge.
 3. Install InstallForge: https://installforge.net/download/
 4. Within InstallForge, on the left side, click "General" under "General"
