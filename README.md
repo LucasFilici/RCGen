@@ -32,9 +32,11 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 7. In response to the _Microsoft Defender SmartScreen_ prompt, click `More Info` and then click `Run Anyway`.
 8. Click `Yes` in response to the "Do you want to allow this app..." prompt.
 9. Walk through the installer.
-10. Enjoy the software.  
+10. Enjoy the software.
+
 ***  
-## Build/Packaging Instructions</br>**[Not relevant for most users.]**
+
+## Build/Packaging Instructions</br>**[Not relevant for most users]**
 
   ### MacOS
   https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
@@ -100,7 +102,7 @@ create-dmg \
 17. Click the ellipsis to the right of "Setup Icon" and select "WindowIcon.ico" (within ~/RCGen-main/dist/RCGen). Do the same for the Uninstaller Icon.
 18. Enjoy your RCGen installer.
 
-## Limitations
+# Limitations
 
 - Currently, RCGen is tailored for instructors teaching Lifesaving Society courses ranging from Parent & Tot 1 to Preschool 5.
 
