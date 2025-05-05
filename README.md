@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=IpwnmOiC8PQ
 1. Click `Releases` on the right ->
 2. Click the latest version of the software.
 3. Click on `Assets`.
-4. Click on the installer relevant to your operating system.
+4. Click on the installer relevant to your operating system.\
   (Mac = `.dmg`)
 5. Click `allow` when asked if you want to allow downloads on "github.com".
 6. Click on the search icon in the top right and type in `terminal`.
@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 1. Click `Releases` on the right ->
 2. Click the latest version of the software.
 3. Click on `Assets`.
-4. Click on the installer relevant to your operating system.
+4. Click on the installer relevant to your operating system.\
   (Windows = `.exe`)
 5. Save the file in your `Downloads` folder (or wherever you want) if prompted.
 6. Find the saved file and double click it.
@@ -40,12 +40,12 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 
   ### MacOS
   https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
-1. Download the source code and install pyinstaller:
+1. Download the source code and install pyinstaller:\
   `pip3 install PyInstaller`
-2. Run the following command within the "RCGen-main" folder:
+2. Run the following command within the "RCGen-main" folder:\
   `pyinstaller --windowed --icon="WindowIcon.icns" RCGen.py`
 3. Install "Brew": https://brew.sh/
-4. Install create-dmg:
+4. Install create-dmg:\
 `brew install create-dmg`
 5. Create the following text document and name it "builddmg.sh":
 ```
@@ -83,24 +83,24 @@ create-dmg \
   `pyinstaller --hidden-import PyQt5.QtCore --hidden-import PyQt5.QtGui --hidden-import PyQt5.QtWidgets --hidden-import PyQt5 --noconsole --add-data "WindowIcon.ico;." RCGen.py`\
   At this point, you will have a functional .exe file within the "dist" folder (within "RCGen-main").\
   If you wish to create an installer, the solution I used was InstallForge.
-4. Install InstallForge: https://installforge.net/download/
-5. Within InstallForge, on the left side, click "General" under "General"
-6. Type "RCGen" to the right of "Product Name".
-7. Type "v0.1.0" to the right of "Product Version".
-8. Type "Lucas Filici" to the right of "Company Name".
-9. On the left side, click on "Files" under "Setup".
-10. Click on "Add Files" on the top ribbon and add all files within the "RCGen" folder (within ~/RCGen-main/dist/).
-11. Click on "Add Folders" on the top ribbon and add the "PyQt5" folder.
-12. Within the "Uninstallation" tab, click the checkbox next to "Include Uninstaller".
-13. On the left side, under "Dialogs", click "Finish" and click the checkbox next to "Run Application". Edit the text box next to "Run Application" to say '<InstallPath>\RCGen.exe'.
-14. On the left side, under "System", click "Shortcuts". Feel free to Add a Desktop and Start Menu shortcut. The only difference in these steps is whether you click "Startmenu" or "Desktop" under "Destination".\
+3. Install InstallForge: https://installforge.net/download/
+4. Within InstallForge, on the left side, click "General" under "General"
+5. Type "RCGen" to the right of "Product Name".
+6. Type "v0.1.0" to the right of "Product Version".
+7. Type "Lucas Filici" to the right of "Company Name".
+8. On the left side, click on "Files" under "Setup".
+9. Click on "Add Files" on the top ribbon and add all files within the "RCGen" folder (within ~/RCGen-main/dist/).
+10. Click on "Add Folders" on the top ribbon and add the "PyQt5" folder.
+11. Within the "Uninstallation" tab, click the checkbox next to "Include Uninstaller".
+12. On the left side, under "Dialogs", click "Finish" and click the checkbox next to "Run Application". Edit the text box next to "Run Application" to say '\<InstallPath>\RCGen.exe'.
+13. On the left side, under "System", click "Shortcuts". Feel free to Add a Desktop and Start Menu shortcut. The only difference in these steps is whether you click "Startmenu" or "Desktop" under "Destination".\
 &nbsp;&nbsp;&nbsp;&nbsp;a. Type 'RCGen' under "Shortcut Name".\
-&nbsp;&nbsp;&nbsp;&nbsp;b. Type '<InstallPath>\RCGen' under "Target File".\
-&nbsp;&nbsp;&nbsp;&nbsp;c. Type '<InstallPath>\WindowsIcon.ico' under "Icon File".
-15. On the left side, under "Build", click "Build".
-16. To the right of "Setup File" and to the right of the blank text box, click the ellipsis and designate the name of your Installer along with the location you want it to be saved.
-17. Click the ellipsis to the right of "Setup Icon" and select "WindowIcon.ico" (within ~/RCGen-main/dist/RCGen). Do the same for the Uninstaller Icon.
-18. Enjoy your RCGen installer.
+&nbsp;&nbsp;&nbsp;&nbsp;b. Type '\<InstallPath>\RCGen' under "Target File".\
+&nbsp;&nbsp;&nbsp;&nbsp;c. Type '\<InstallPath>\WindowsIcon.ico' under "Icon File".
+14. On the left side, under "Build", click "Build".
+15. To the right of "Setup File" and to the right of the blank text box, click the ellipsis and designate the name of your Installer along with the location you want it to be saved.
+16. Click the ellipsis to the right of "Setup Icon" and select "WindowIcon.ico" (within ~/RCGen-main/dist/RCGen). Do the same for the Uninstaller Icon.
+17. Enjoy your RCGen installer.
 
 # Limitations
 
