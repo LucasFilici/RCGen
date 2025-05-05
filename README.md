@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 ==**[For advanced users who wish to have complete control over their installation.]**==
 
   ### MacOS
-  - https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
+  https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
     1.Download the source code and install pyinstaller:
       `pip3 install PyInstaller`
     2. Run the following command within the "RCGen-main" folder:
@@ -48,7 +48,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
     `brew install create-dmg`
     5. [I will come back to this in a bit.]
   ### Windows
-  - https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
+  https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
     1. Download the source code and install pyinstaller:
        `pip3 install PyInstaller`
     2. Run the following command within the "RCGen-main" folder:
