@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=IpwnmOiC8PQ
 11. Click `Open` in response to: _"'RCGen' is an app downloaded from the Internet. Are you sure you want to open it?"_
 12. Go back to the terminal, type `sudo spctl --master-enable`, and hit `return` on your keyboard.
 13. Enter the password for your Mac and hit `return` on your keyboard.
-14. Close the terminal and anything else. You're good now. Enjoy the software.
+14. Close the terminal and anything else. Enjoy the software.
 
 ## How To Install on PC
 https://www.youtube.com/watch?v=tUdrqg-P9dc
@@ -32,7 +32,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 7. In response to the _Microsoft Defender SmartScreen_ prompt, click `More Info` and then click `Run Anyway`.
 8. Click `Yes` in response to the "Do you want to allow this app..." prompt.
 9. Walk through the installer.
-10. You're good now. Enjoy the software.
+10. Enjoy the software.
 
 ## Packaging Instructions
 ==**[For advanced users who wish to have complete control over their installation.]**==
