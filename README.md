@@ -67,9 +67,9 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 11. Within the "Uninstallation" tab, click the checkbox next to "Include Uninstaller".
 12. On the left side, under "Dialogs", click "Finish" and click the checkbox next to "Run Application". Edit the text box next to "Run Application" to say '<InstallPath>\RCGen.exe'.
 13. On the left side, under "System", click "Shortcuts". Feel free to Add a Desktop and Start Menu shortcut. The only difference in these steps is whether you click "Startmenu" or "Desktop" under "Destination".
-  a. Type 'RCGen' under "Shortcut Name".
-  b. Type '<InstallPath>\RCGen' under "Target File".
-  c. Type '<InstallPath>\WindowsIcon.ico' under "Icon File".
+a. Type 'RCGen' under "Shortcut Name".
+b. Type '<InstallPath>\RCGen' under "Target File".
+c. Type '<InstallPath>\WindowsIcon.ico' under "Icon File".
 14. On the left side, under "Build", click "Build".
 15. To the right of "Setup File" and to the right of the blank text box, click the ellipsis and designate the name of your Installer along with the location you want it to be saved.
 16. Click the ellipsis to the right of "Setup Icon" and select "WindowIcon.ico" (within ~/RCGen-main/dist/RCGen). Do the same for the Uninstaller Icon.
