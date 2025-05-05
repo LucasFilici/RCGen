@@ -49,7 +49,7 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
     5. [I will come back to this in a bit.]
   ### Windows
   https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
-    1. Download the source code and install pyinstaller:
+1. Download the source code and install pyinstaller:
        `pip3 install PyInstaller`
     2. Run the following command within the "RCGen-main" folder:
        `pyinstaller --hidden-import PyQt5.QtCore --hidden-import PyQt5.QtGui --hidden-import PyQt5.QtWidgets --hidden-import PyQt5 --noconsole --add-data "WindowIcon.ico;." RCGen.py`
