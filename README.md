@@ -1,7 +1,7 @@
-## RCGen
+# RCGen
 RCGen is a piece of Free/Libre and Open Source Software that generates swimming report cards.
 
-## How To Install on MacOS
+### How To Install on MacOS
 https://www.youtube.com/watch?v=IpwnmOiC8PQ
 1. Click `Releases` on the right ->
 2. Click the latest version of the software.
@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=IpwnmOiC8PQ
 13. Enter the password for your Mac and hit `return` on your keyboard.
 14. Close the terminal and anything else. Enjoy the software.
 
-## How To Install on PC
+### How To Install on PC
 https://www.youtube.com/watch?v=tUdrqg-P9dc
 1. Click `Releases` on the right ->
 2. Click the latest version of the software.
@@ -32,10 +32,9 @@ https://www.youtube.com/watch?v=tUdrqg-P9dc
 7. In response to the _Microsoft Defender SmartScreen_ prompt, click `More Info` and then click `Run Anyway`.
 8. Click `Yes` in response to the "Do you want to allow this app..." prompt.
 9. Walk through the installer.
-10. Enjoy the software.
-
-## Building/Packaging Instructions
-==**[For advanced users who wish to have complete control over their installation.]**==
+10. Enjoy the software.  
+***  
+## Build/Packaging Instructions</br>**[Not relevant for most users.]**
 
   ### MacOS
   https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/
